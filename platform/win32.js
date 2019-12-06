@@ -42,7 +42,7 @@ class SayPlatformWin32 extends SayPlatformBase {
     let pipedData = ''
     let options = {}
 
-    let psCommand = `Add-Type -AssemblyName System.speech;$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer;`
+    let psCommand = `Add-Type -AssemblyName System.speech;$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer;$speak.Volume=100;`
 
     if (voice) {
       psCommand += `$speak.SelectVoice('${voice}');`
